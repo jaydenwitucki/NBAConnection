@@ -5,10 +5,10 @@ Uses Javascript, HTML, CSS
 
 
 ## Connect any 2 NBA Players
-* Enter 2 NBA Players
-* Get a chain connecting them through mutual teammates.
+  - Enter 2 NBA Players
+  - Get a list connecting them through mutual teammates.
 
-*Implements a breadth-first search algorithm to find all the possible teams and teammates for any given player, and finds
-the shortest path to a second player, returning all the links in the chain.*
+Implements a breadth-first search algorithm to find all the possible teams and teammates for any given player, and finds
+the shortest path to a second player, returning all the links between them.
 
 
