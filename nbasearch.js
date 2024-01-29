@@ -13,15 +13,11 @@ function toTitleCase(str) {
                 return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
                 
             }
-
-
         }
 
         else if(txt==="iii"||txt==="III"||txt==="Iii"){
             return "III";
         }
-
-
         else{
             return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
         }
@@ -37,7 +33,7 @@ function toTitleCase(str) {
     }, 1500);
  }
 
-//get shortest path to 2nd player
+//shortest path to 2nd player
 function getPath() {
     
     document.querySelector(".instructions").classList.add("hidden")
@@ -47,7 +43,6 @@ function getPath() {
         document.getElementById("connections-list").innerHTML = "Player Not Found";
         return false;
     }
-
     let seenTeams = []
     let nextTeams = []
     let seenPlayers = [[startPlayer,[startPlayer]]]
@@ -58,28 +53,20 @@ function getPath() {
 
 
     while(winArray.length<1){
-
-
         //queue up teams
-
         if(nextPlayers[0]){
             players[nextPlayers[0][0]].forEach(team =>{
 
                 if(seenTeams.includes(team)){
                     return;
                 }
-
-
                 queueObject = [team,nextPlayers[0][1].concat(team)]
 
                 seenTeams.push(team)
                 nextTeams.push(queueObject)
-
-                
             })
             nextPlayers.shift();
         }
-
         //queue up players
         if(nextTeams[0]){
             teams[nextTeams[0][0]].forEach(player =>{
@@ -87,8 +74,6 @@ function getPath() {
                 if(seenPlayers.includes(player)){
                     return;
                 }
-                
-                
                 queueObject = [player,nextTeams[0][1].concat(player)]
 
                 if(player===endPlayer){
