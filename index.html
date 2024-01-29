@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    
+    <link rel="stylesheet" href="assets/stylesheets/css_reset.css">
+    <link rel="stylesheet" href="assets/stylesheets/main.css">
+    <link rel="stylesheet" href="assets/stylesheets/footer.css">
+    <link rel="stylesheet" href="assets/stylesheets/team_colors.css">
+    <link rel="stylesheet" href="assets/stylesheets/animation.css">
+    
+    
+    <title>Teammate Connection</title>
+    <script type="application/javascript" src="./seedteams.js"></script>
+    <script type="application/javascript" src="./seedplayers.js"></script>
+    <script type="application/javascript" src="./nbasearch.js"></script>
+    <script type="application/javascript" src="./random.js"></script>
+
+</head>
+
+<body>
+    <div class="title-container">
+        <h1 class ="title">Teammate Connect</h1>
+        
+        
+    </div>
+        <div class="page disable-scrollbars">
+        <div class="container">
+            <div class="inputs"> 
+                    <div class="input1">
+                        <div class="inputrandom"><i class="fas fa-random" id="random1" onclick="randomNew()"></i><input text id="playerInput1" onfocus="this.select();" onmouseup="return false" placeholder="First Player"></input><i class="fas fa-random" id="random1hidden" onclick="randomNew()"></i></div>
+                    </div>
+                    <div class="input2">
+                        <div class="inputrandom"><input text id="playerInput2" onfocus="this.select();" onmouseup="return false" placeholder="Second Player"></input><i class="fas fa-random random2" onclick="randomOld()"></i></div>
+                    </div>
+            </div>
+            <button class = "connect-button" onclick="getPath()">Connect</button>
+            <ul id="connections-list">
+    
+            </ul>
+            <p class="instructions">Enter any 2 NBA players to see their connection through common teammates.</p>
+    
+    
+    
+        </div>
+
+
+
+
+    </div>
+    <!--<script type="application/javascript" src="./autocomplete.js"></script>
+
+</body>
+</html>
